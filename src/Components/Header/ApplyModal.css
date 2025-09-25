@@ -1,0 +1,16 @@
+.modal-backdrop.show {
+  backdrop-filter: blur(19px);   /* The blur strength */
+  background-color:(0, 0, 0, 0.95); /* Slight dark overlay */
+}
+
+.required {
+  color:red;
+  margin-left: 2px;
+  font-weight: bold;
+}
+
+.error {
+  color:red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}

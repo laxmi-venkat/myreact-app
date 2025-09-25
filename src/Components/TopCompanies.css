@@ -1,0 +1,27 @@
+.logo-box{
+    background-color: white;
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgb(0 0 0/0.5);
+    width:30px;
+    height:70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.logo-box img{
+    max-height: 40px;
+    max-width: 100%;
+    object-fit: contain;
+
+}
+
+.plus-box{
+    font-size:2rem;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    user-select: none;
+}
+
