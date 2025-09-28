@@ -1,187 +1,111 @@
-import React,{useState,useEffect} from "react";
-import { 
-  FaFacebook, 
-  FaInstagram, 
-  FaYoutube, 
-  FaTwitter,
-  FaLinkedin
-} from "react-icons/fa";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaYoutube,
+  FaTwitter,
+  FaLinkedin,
+} from "react-icons/fa";
 
 const Footer = () => {
-  const [currentTime,setCurrentTime] = useState(new Date());
-  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [currentTime, setCurrentTime] = useState(new Date());
 
-  useEffect(()=>{
-    const timer = setInterval (()=> setCurrentTime(new Date()),1000);
+  useEffect(() => {
+    const timer = setInterval(() => setCurrentTime(new Date()), 1000);
     return () => clearInterval(timer);
-  },[])
+  }, []);
+
   return (
-    <footer className="footer" style={{ backgroundColor: '#f5f5f5', paddingTop: '60px', paddingBottom: '40px' }}>
-      {/* Main container */}
-      <div style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'flex-start',
-        maxWidth: '1200px',
-        margin: '0 auto',
-        padding: '0 40px',
-        gap: '80px'
-      }}>
-        
-        {/* Left Section - Logo */}
-        <div style={{ flex: '0 0 auto' }}>
-          <Link
-          to= "/"
-          onClick={()=> setActiveDropdown(null)}
-          style={{
-            width: '50px',
-            height: '50px',
-            backgroundColor: '#ff6600',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: '28px',
-            fontWeight: 'bold',
-            color: 'white',
-            fontFamily: 'Arial, sans-serif',
-            textDecoration:'none',
-            
-          }}>
-            T
-          </Link>
-        </div>
+    <footer className="bg-light pt-5 pb-4">
+      <div className="container">
+        <div className="row text-start">
+          {/* Logo */}
+          <div className="col-md-2 mb-4 d-flex align-items-start">
+            <Link
+              to="/"
+              className="d-flex align-items-center justify-content-center text-white fw-bold fs-4 "
+              style={{
+                width: "50px",
+                height: "50px",
+                backgroundColor: "#ff6600",
+                textDecoration: "none",
+              }}
+            >
+              T
+            </Link>
+          </div>
 
-        {/* Programs Column */}
-        <div style={{ flex: '1', minWidth: '180px' }}>
-          <h3 style={{
-            fontSize: '16px',
-            fontWeight: '600',
-            marginBottom: '20px',
-            color: '#333',
-            fontFamily: 'Arial, sans-serif'
-          }}>
-            Programs
-          </h3>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <p style={{ margin: '0', fontSize: '14px', color: '#666', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>Entrepreneurship</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#666', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>Steps to Run a Startup </p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#666', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>Work at a Startup</p>
+          {/* Programs */}
+          <div className="col-md-2 mb-4">
+            <h6 className="fw-bold mb-3 text-dark">Programs</h6>
+            <ul className="list-unstyled text-muted small">
+              <li className="mb-2">Entrepreneurship</li>
+              <li className="mb-2">Steps to Run a Startup</li>
+              <li className="mb-2">Work at a Startup</li>
+            </ul>
+          </div>
 
+          {/* Company */}
+          <div className="col-md-3 mb-4">
+            <h6 className="fw-bold mb-3 text-dark">Company</h6>
+            <ul className="list-unstyled text-muted small">
+              <li className="mb-2">Super Chat</li>
+              <li className="mb-2">IRasus</li>
+              <li className="mb-2">CodeVidhaya</li>
+              <li className="mb-2">BioHeaven360</li>
+              <li className="mb-2">ThagamCapital</li>
+              <li className="mb-2">How We Found</li>
+              <li className="mb-2">Requirements For Funding</li>
+              <li className="mb-2">People</li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div className="col-md-3 mb-4">
+            <h6 className="fw-bold mb-3 text-dark">Resources</h6>
+            <ul className="list-unstyled text-muted small">
+              <li className="mb-2">NDA</li>
+              <li className="mb-2">Startup Directory</li>
+              <li className="mb-2">Startup Library</li>
+              <li className="mb-2">Terms of Investments</li>
+            </ul>
+          </div>
+
+          {/* Apply Button */}
+          <div className="col-md-2 mb-4 text-md-end">
+            <p className="fw-bold text-muted mb-2">
+              Make something people want.
+            </p>
+            <button
+              className="btn fw-semibold px-3 py-1 text-white"
+              style={{
+                backgroundColor: "#ff6600",
+                border: "none",
+              }}
+            >
+              Apply
+            </button>
           </div>
         </div>
 
-        {/* Company Column */}
-        <div style={{ flex: '1', minWidth: '180px' }}>
-          <h3 style={{
-            fontSize: '16px',
-            fontWeight: '600',
-            marginBottom: '20px',
-            color: '#333',
-            fontFamily: 'Arial, sans-serif'
-          }}>
-            Company
-          </h3>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <p style={{ margin: '0', fontSize: '14px', color: '#666', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>Super Chat</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#666', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>IRasus</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#666', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>CodeVidhaya</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#666', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>BioHeaven360</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#666', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>ThagamCapital</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#666', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>How We Found</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#666', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>Requirements For Funding</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#666', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>People</p>
-            
-          </div>
-        </div>
+        <hr />
 
-        {/* Resources Column */}
-        <div style={{ flex: '1', minWidth: '180px' }}>
-          <h3 style={{
-            fontSize: '16px',
-            fontWeight: '600',
-            marginBottom: '20px',
-            color: '#333',
-            fontFamily: 'Arial, sans-serif'
-          }}>
-            Resources
-          </h3>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <p style ={{margin:'0', fontSize:'14px',color:'#666',cursor:'pointer'}}>NDA</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#666', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>Startup Directory</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#666', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>Startup Library</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#666', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>Terms of Investemnts</p>
-            {/* <p style={{ margin: '0', fontSize: '14px', color: '#666', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>SAFE</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#666', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>Hacker News</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#666', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>Launch YC</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#666', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>YC Deals</p> */}
+        {/* Bottom Section */}
+        <div className="row align-items-center pt-3">
+          <div className="col-md-6 text-muted small">
+            &copy; {currentTime.getFullYear()}{" "}
+            <span className="fw-bold">Thangam Capital</span>
           </div>
-        </div>
-
-        {/* Apply Button Section */}
-        <div style={{ flex: '0 0 auto', textAlign: 'right' }}>
-          <p style={{ 
-            fontSize: '16px', 
-            color: '#666', 
-            marginBottom: '12px',
-            fontFamily: 'Arial, sans-serif',
-            fontWeight:'bold'
-          }}>
-            Make something people want.
-          </p>
-          <button style={{
-            backgroundColor: '#ff6600',
-            color: 'white',
-            border: 'none',
-            padding: '8px 16px',
-            fontSize: '14px',
-            fontWeight: '600',
-            cursor: 'pointer',
-            borderRadius: '4px',
-            fontFamily: 'Arial, sans-serif'
-          }}>
-            Apply
-          </button>
-        </div>
-      </div>
-     <hr></hr>
-      {/* Bottom Section */}
-      <div style={{
-        maxWidth: '1200px',
-        margin: '40px auto 0',
-        padding: '0 40px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center'
-      }}>
-        <p style={{ 
-          margin: '0', 
-          fontSize: '14px', 
-          color: '#666',
-          fontFamily: 'Arial, sans-serif'
-        }}>
-        &copy; {currentTime.getFullYear()}
-         <span style={{
-          marginRight:'45em',
-          paddingTop:'1px',
-          paddingLeft:'2px',
-          fontWeight:'bold'
-        }}>
-         Thangam Captial
-         </span>
-        </p> 
-       
-        
-        <div style={{
-          display: 'flex',
-          gap: '16px',
-          fontSize: '20px'
-        }}>
-          <FaTwitter style={{ color: '#666', cursor: 'pointer' }} />
-          <FaFacebook style={{ color: '#666', cursor: 'pointer' }} />
-          <FaInstagram style={{ color: '#666', cursor: 'pointer' }} />
-          <FaLinkedin style={{ color: '#666', cursor: 'pointer' }} />
-          <FaYoutube style={{ color: '#666', cursor: 'pointer' }} />
+          <div className="col-md-6 text-md-end">
+            <div className="d-flex justify-content-md-end justify-content-start gap-3 fs-5 text-muted">
+              <FaTwitter />
+              <FaFacebook />
+              <FaInstagram />
+              <FaLinkedin />
+              <FaYoutube />
+            </div>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import iconInterface from "../../../assets/codevidya/interface.png";
 import iconAccessibility from "../../../assets/codevidya/Accessbility.png";
 import iconSupport from "../../../assets/codevidya/phoneicon.png";

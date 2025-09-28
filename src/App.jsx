@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header/Navbar";
-import Ycombinator from "./Components/Ycombinator";
+import Ycombinator from "./Components/YCombinator";
 import TopCompanies from "./Components/TopCompanies";
 import Footer from "./Components/Footer";
 import Requirements from "./Components/About/Requirements";
 import People from "./Components/About/People";
-
+import './index.css';
 import MainPerson from "./Components/About/MainPerson";
 import HowWeFund from "./Components/About/HowWeFund";
 import BioHeaven from "./Components/Companies/BioHeaven";
@@ -20,6 +20,8 @@ import SalesAndMarketing from "./Components/Jobs/SalesAndMarketing";
 import AllJobs from "./Components/Jobs/AllJobs";
 import Ourpeople from "./Components/About/Ourpeople";
 
+//import { Navbar } from './Components/Header/Navbar';
+import React from "react";
 
 
 const Home = () => {
@@ -35,6 +37,8 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app-container">
+        
+
         <Header />
         <main className="main-content">
           <Routes>
@@ -50,12 +54,7 @@ function App() {
             <Route path="/companies/irasus" element={<IRasus />} />
             <Route path="/companies/bioheaven" element={<BioHeaven />} />
             <Route path="/companies/thangamcapital" element={<ThangamCapital />} />
-            {/* <nav className="bg-gray-200 p-4 flex gap-6">
-        <Link to="/jobs">All Jobs</Link>
-        <Link to="/jobs/engineering">Engineering</Link>
-        <Link to="/jobs/salesMarketing">Sales & Marketing</Link>
-        <Link to="/jobs/HrAndAdmin">HR & Admin</Link>
-      </nav> */}
+           
            
             <Route path="/jobs/all" element={<AllJobs />} />
             <Route path="/jobs/engineering" element={<Engineering />} />
