@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header/Navbar";
-import Ycombinator from "./Components/YCombinator";
+import Ycombinator from "./Components/Ycombinator";
 import TopCompanies from "./Components/TopCompanies";
 import Footer from "./Components/Footer";
 import Requirements from "./Components/About/Requirements";
