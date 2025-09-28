@@ -5,7 +5,7 @@ import carusole2 from '../../assets/IRasus/carusole2.png';
 import carusole from '../../assets/IRasus/carusole.png';
 import iRasus from '../../assets/IRasus/iRasuslogo.png';
 import Banner from '../../assets/IRasus/Banner3.png';
-import Apiintegration from '../../assets/IRasus/Apiintegration.png';
+// import Apiintegration from '../../assets/IRasus/Apiintegration.png';
 import Faultanddetection from '../../assets/IRasus/Faultanddetection.png'
 import geolocation from '../../assets/IRasus/geolocation.png'
 // Slide data for carousel
