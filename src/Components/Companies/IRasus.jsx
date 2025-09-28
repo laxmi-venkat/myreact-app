@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
+<<<<<<< Updated upstream
 import carusole2 from '../../assets/IRasus/carusole2.png';
 import carusole from '../../assets/IRasus/carusole.png';
 import iRasus from '../../assets/IRasus/iRasuslogo.png';
@@ -8,6 +9,16 @@ import Banner from '../../assets/IRasus/Banner3.png';
 // import Apiintegration from '../../assets/IRasus/Apiintegration.png';
 import Faultanddetection from '../../assets/IRasus/Faultanddetection.png'
 import geolocation from '../../assets/IRasus/geolocation.png'
+=======
+import carusole2 from '/src/assets/IRasus/carusole2.png';
+import carusole from '/src/assets/IRasus/carusole.png';
+import iRasus from '/src/assets/IRasus/iRasuslogo.png';
+import Banner from '/src/assets/IRasus/Banner3.png';
+import Apiintegration from '/src/assets/IRasus/Apiintegration.png';
+import Faultanddetection from '/src/assets/IRasus/Faultanddetection.png'
+import geolocation from '/src/assets/IRasus/geolocation.png'
+
+>>>>>>> Stashed changes
 // Slide data for carousel
 const slides = [
   {
